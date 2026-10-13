@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build cavity flow",
+      "type": "shell",
+      "command": "gfortran",
+      "args": [
+        "-std=f2008",
+        "-Wall",
+        "-Wextra",
+        "-fcheck=all",
+        "src/cavity_model.f90",
+        "src/main.f90",
+        "-o",
+        "cavity_flow"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$gcc",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run cavity flow",
+      "type": "shell",
+      "command": "./cavity_flow",
+      "dependsOn": "Build cavity flow",
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

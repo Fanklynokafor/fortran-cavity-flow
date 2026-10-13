@@ -1,0 +1,11 @@
+# Compiled Fortran files
+cavity_flow
+*.mod
+*.o
+
+# macOS folder metadata
+.DS_Store
+
+# Simulation output (regenerated each run)
+cavity_field.csv
+centerline_profile.csv

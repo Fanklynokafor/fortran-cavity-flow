@@ -1,0 +1,13 @@
+&simulation
+  nx = 41,
+  ny = 41,
+  steps = 4000,
+  poisson_iterations = 240,
+  length_x = 1.0,
+  length_y = 1.0,
+  reynolds_number = 100.0,
+  lid_speed = 1.0,
+  time_step = 0.0025,
+  poisson_tolerance = 1.0e-7,
+  sor_factor = 1.65
+/
